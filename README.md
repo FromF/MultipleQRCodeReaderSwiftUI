@@ -1,0 +1,2 @@
+# MultipleQRCodeReaderSwiftUI
+複数分割されたQRコードを読み取るサンプルプロジェクト
