@@ -14,7 +14,14 @@ struct QRReaderView: View {
         NavigationView {
             VStack {
                 CALayerView(caLayer: qrReaderViewModel.previewLayer)
-                
+                    .clipped()
+                    .cornerRadius(16)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(Color.white, lineWidth: 1)
+                    )
+                    .padding()
+
                 NavigationLink(
                     destination: ResultView(textArray: qrReaderViewModel.metaText()),
                     isActive: $qrReaderViewModel.finishMultipleQR,

@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct CALayerView: UIViewControllerRepresentable {
-    var caLayer:CALayer
+    var caLayer:AVCaptureVideoPreviewLayer
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<CALayerView>) -> UIViewController {
         let viewController = UIViewController()
 
         viewController.view.layer.addSublayer(caLayer)
+        caLayer.videoGravity = .resizeAspectFill
         caLayer.frame = viewController.view.layer.frame
 
         return viewController

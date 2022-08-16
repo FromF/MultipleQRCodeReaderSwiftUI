@@ -13,7 +13,7 @@ import SwiftUI
 
 class QRReaderViewModel: NSObject, ObservableObject {
     ///プレビュー用レイヤー
-    var previewLayer:CALayer!
+    var previewLayer:AVCaptureVideoPreviewLayer!
     
     ///連結QR読み込み終了
     @Published var finishMultipleQR = false
